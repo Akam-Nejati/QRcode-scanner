@@ -8,20 +8,40 @@ export default defineConfig({
   plugins: [
     vue(),
     VitePWA({
-      registerType: 'autoUpdate',
+      injectRegister: 'auto',
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg}']
       },
       manifest: {
-        name: "ribbo",
-        short_name: "ribbo",
+        name: "vitePwa",
+        short_name: "vitePwa",
         theme_color: "#242424",
         background_color: "#242424",
-        display: "standalone",
-        scope: "/",
-        start_url: "/",
-        description: "this is an programming blog",
-      }
+        icons: [
+          {
+            src: '/qr-code-192*192.png', // <== don't add slash, for testing
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: '/qr-code-512*512.png', // <== don't remove slash, for testing
+            sizes: '512x512',
+            type: 'image/png',
+          },
+          {
+            src: 'qr-code-512*512.png', // <== don't add slash, for testing
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'any maskable',
+          },
+        ],
+      },
+      devOptions: {
+        enabled: true,
+        suppressWarnings: true,
+        navigateFallbackAllowlist: [/^\/$/],
+        type: "module",
+      },
     })
   ],
 })
