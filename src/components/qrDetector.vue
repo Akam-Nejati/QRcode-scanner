@@ -2,6 +2,8 @@
 import { ref } from 'vue';
 import Result from './result.vue';
 import CameraDetector from './cameraDetector.vue';
+import FileDetector from './fileDetector.vue';
+import CreateQr from './createQr.vue';
 
 const result = ref<string>("")
 
@@ -17,6 +19,11 @@ function onDetect(detectedCodes: any) {
             <div class="p-4">
                 <CameraDetector :onDetect="onDetect"/>
                 <Result :result="result" class="mt-4"/>
+            </div>
+            <div>
+                <FileDetector :onDetect="onDetect">
+                    <CreateQr />
+                </FileDetector>
             </div>
         </div>
     </div>

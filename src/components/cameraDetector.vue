@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-    <div class="rounded-xl shadow-xl bg-[#9DC08B] overflow-hidden w-full h-[20rem] p-4">
+    <div class="rounded-xl shadow-xl bg-[#9DC08B] overflow-hidden w-full h-[20rem] ">
         <qrcode-stream @detect="onDetect" class="w-full h-full"></qrcode-stream>
     </div>
 </template>
