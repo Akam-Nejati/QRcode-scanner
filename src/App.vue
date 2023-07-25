@@ -1,9 +1,10 @@
 <script setup lang="ts">
+import qrDetector from "./components/qrDetector.vue"
 </script>
 
 <template>
-  hello
+  <qrDetector/>
 </template>
 
-<style scoped>
+<style >
 </style>
