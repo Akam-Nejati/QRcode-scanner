@@ -5,12 +5,12 @@ defineProps<{
 </script>
 
 <template>
-    <div class="w-full border-4 border-[#9DC08B] rounded-xl p-8">
+    <div class="w-full border-4 border-slate-900 rounded-xl p-8">
         <span class="text-xl font-bold">
-            <span class="text-[#40513B]">
+            <span class="text-slate-300">
                 result: 
             </span>
-            <a :href="result" class="text-[#609966] hover:underline">
+            <a :href="result" class="text-slate-900 hover:underline">
                 {{ result ? result : "nothing here" }}
             </a>
         </span>

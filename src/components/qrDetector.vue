@@ -14,7 +14,7 @@ function onDetect(detectedCodes: any) {
 </script>
 
 <template>
-    <div class="w-full h-screen flex justify-center items-center bg-[#EDF1D6] py-8">
+    <div class="w-full h-screen flex justify-center items-center bg-slate-800 py-8">
         <div class="w-[30rem] h-[calc(100vh-4rem)] flex flex-col justify-between p-4">
             <div>
                 <CameraDetector :onDetect="onDetect"/>
