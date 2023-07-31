@@ -7,9 +7,8 @@ import CreateQr from './createQr.vue';
 
 const result = ref<string>("")
 
-function onDetect(detectedCodes: any) {
+function handleDetect(detectedCodes: any) {
     result.value = detectedCodes[0].rawValue
-    console.log(result.value);
 }
 </script>
 
@@ -17,11 +16,11 @@ function onDetect(detectedCodes: any) {
     <div class="w-full h-screen flex justify-center items-center bg-slate-800 py-8">
         <div class="w-[30rem] h-[calc(100vh-4rem)] flex flex-col justify-between p-4">
             <div>
-                <CameraDetector :onDetect="onDetect"/>
+                <CameraDetector :handleDetect="handleDetect"/>
                 <Result :result="result" class="mt-4"/>
             </div>
             <div>
-                <FileDetector :onDetect="onDetect">
+                <FileDetector :handleDetect="handleDetect">
                     <CreateQr />
                 </FileDetector>
             </div>

@@ -2,7 +2,7 @@
 import { QrcodeCapture } from 'vue-qrcode-reader'
 
 defineProps<{
-    onDetect: any
+    handleDetect: any
 }>()
 </script>
 
@@ -13,7 +13,7 @@ defineProps<{
                     <div class="w-full bg-slate-900 p-4 rounded-xl shadow-xl text-xl font-bold text-slate-300 flex justify-center cursor-pointer">
                         upload
                     </div>
-                    <QrcodeCapture id="upload" @detect="onDetect" class="hidden" />
+                    <QrcodeCapture id="upload" @detect="handleDetect" class="hidden" />
             </label>
         </div>
         <div class="col-span-1">
