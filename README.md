@@ -1,4 +1,4 @@
-#tolls ⚒️
+###tolls ⚒️ :
 vite-pwa
 vue-qrcode-reader // for reading qrcode
 qrcode.vue // for generate qrcode
